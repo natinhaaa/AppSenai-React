@@ -6,7 +6,7 @@ const Header = ({color, subtitle}) => {
     return (
         <View style={[styles.container, {backgroundColor: color}]}>
             <StatusBar backgroundColor="black"/>
-            <Image source={require('../images/senai_logo.png')} style={styles.logo}/>
+            <Image source={require('../assets/senai_logo.png')} style={styles.logo}/>
             <Text style={styles.subtitulo}>{subtitle}</Text>
         </View>
     );

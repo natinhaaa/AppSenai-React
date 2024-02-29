@@ -1,6 +1,5 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const Botao = ({texto_botao}) => {
     return(
@@ -27,7 +26,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginTop: 12,
         marginBottom: 5,
-        width: 270
+        width: 275
     },
     
     acessar: {
