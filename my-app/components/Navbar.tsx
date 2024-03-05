@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { Children, PropsWithChildren } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-const Navbar = ({icon1, icon2}) => {
+type NavbarProps = {
+    color: string
+}
+
+const Navbar = ({children}: any) => {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container]}>
             <StatusBar backgroundColor="black"/>
-            <View style={styles.separar}>
-                <View>{icon1}</View>
-                <View>{icon2}</View>
-            </View>
-            
+            <View style={styles.separar}>{children}</View>
         </View>
     );
 }
@@ -18,7 +18,7 @@ const Navbar = ({icon1, icon2}) => {
 const styles = StyleSheet.create({
 
     container: {
-        height: 50,
+        height: 60,
         width: "100%",
         marginTop: 30,
         borderBottomWidth: 1,

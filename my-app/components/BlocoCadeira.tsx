@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 const BlocoCadeira = () => {
     return (
@@ -8,7 +8,7 @@ const BlocoCadeira = () => {
             <StatusBar backgroundColor="black"/>
             <View style={styles.conteudo}>
                 <Text style={styles.numero}>956389</Text>
-                <Text>CADEIRA  SENAI</Text>
+                <Text>CADEIRA SENAI</Text>
             </View>
         </View>
     );
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 
     container: {
         height: 70,
-        width: 390,
+        width: "100%",
         display: "flex",
         alignItems: "center",
         flexDirection: "row",

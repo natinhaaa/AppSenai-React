@@ -1,7 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const Botao = ({texto_botao}) => {
+type InputProps = {
+    texto_botao: string
+}
+
+const Botao = ({texto_botao}: InputProps) => {
     return(
         <View style= {styles.container}>
             <TouchableOpacity style={styles.botao}>
@@ -24,9 +28,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         padding: 10,
         borderRadius: 5,
-        marginTop: 12,
+        marginTop: 20,
         marginBottom: 5,
-        width: 275
+        width: 310
     },
     
     acessar: {

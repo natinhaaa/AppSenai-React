@@ -10,8 +10,8 @@ function Login() {
             <Header color={"#000000"} subtitle={"Login"}></Header>
             <Text style={styles.texto}>Faça Login para Acessar o Sistema!</Text>
             <StatusBar backgroundColor="black"/>
-            <Input texto={"E-mail:"} input={"Insira seu e-mail"}></Input>
-            <Input texto={"Senha:"} input={"Insira sua senha"}></Input>
+            <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"}></Input>
+            <Input texto={"Senha:"} placeholder={"Insira sua senha"}></Input>
             <Botao texto_botao={"Login"}></Botao>
             <View style={styles.bloco}>
                 <TouchableOpacity style={styles.clique}>

@@ -1,12 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TextInputProps, View } from 'react-native';
 
-const Input =({texto, input}) => {
+interface InputProps extends TextInputProps{
+    texto: string
+}
+
+const Input =({texto, ...props}: InputProps) => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.texto}>{texto}</Text>
-            <TextInput style={styles.input} placeholder={input}/>
-        </View>
+        <>
+            <View style={styles.container}>
+                <Text style={styles.texto}>{texto}</Text>
+                <TextInput {...props} style={styles.input} placeholderTextColor="#808080"/>
+            </View>
+        </>
+        
     );
 }
 
@@ -18,7 +25,7 @@ const styles = StyleSheet.create({
 
     input: {
         marginLeft: 20,
-        width: 270,
+        width: 310,
         height: 35,
         backgroundColor: '#F5F5F5',
         padding: 10,
@@ -27,7 +34,7 @@ const styles = StyleSheet.create({
 
     texto: {
         fontSize: 12,
-        padding: 12,
+        padding: 15,
         marginLeft: 15
     }
 })

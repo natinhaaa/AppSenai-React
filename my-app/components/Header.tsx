@@ -2,7 +2,12 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-const Header = ({color, subtitle}) => {
+type InputProps = {
+    color: string,
+    subtitle: string
+}
+
+const Header = ({color, subtitle}: InputProps) => {
     return (
         <View style={[styles.container, {backgroundColor: color}]}>
             <StatusBar backgroundColor="black"/>
@@ -22,7 +27,7 @@ const styles = StyleSheet.create({
 
     container: {
         height: 200,
-        width: 360,
+        width: "100%",
         display: "flex",
         alignItems: "center",
         backgroundColor: "red"
