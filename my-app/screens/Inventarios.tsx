@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, TouchableOpacity, Text } from 'react-native';
+import { ScrollView, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { Octicons, AntDesign, Feather } from '@expo/vector-icons';
 import Navbar from '../components/Navbar';
 import BlocoCadeira from '../components/BlocoCadeira';
 import Footer from '../components/Footer';
+import { Ionicons, MaterialCommunityIcons, Foundation } from '@expo/vector-icons';
+
 
 
 function Inventarios() {
@@ -35,9 +37,20 @@ function Inventarios() {
                 <BlocoCadeira />
                 <BlocoCadeira />
             </ScrollView>
-            <Footer />
+            <Ionicons style={styles.adicionar} name="add-circle-sharp" size={55} color="red" />
+            <Footer color="#FF0000" icon1={<MaterialCommunityIcons name="camera-flip-outline" size={24} color="white" />} icon2={<Foundation name="list-number" size={24} color="white" />}/>
         </>
     );
 }
+
+const styles = StyleSheet.create({
+
+    adicionar: {
+        position: "absolute",
+        right: 20,
+        bottom: 80
+    }
+
+})
 
 export default Inventarios;

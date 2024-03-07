@@ -3,12 +3,14 @@ import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import Navbar from '../components/Navbar';
 import Input2 from '../components/Inputs2';
-import Footer2 from '../components/Footer2';
+import Footer from '../components/Footer';
+import { Ionicons, MaterialCommunityIcons, Foundation } from '@expo/vector-icons';
+
 
 function AddItems() {
     return (
         <>
-            <Navbar background={"#FF0000"}>
+            <Navbar background= "#FF0000">
                 <TouchableOpacity>
                     <AntDesign name="arrowleft" size={24} color="black" />
                 </TouchableOpacity>
@@ -34,7 +36,8 @@ function AddItems() {
                     <Input2 texto={"Data de Registro *"} style={styles.input} placeholder="Ex: 10/10/10"/>
                 </View>
             </View>
-            <Footer2/>            
+            <Footer color="#FFFFFF" icon1={<MaterialCommunityIcons name="camera-flip-outline" size={24} color="gray" />} icon2={<Foundation name="list-number" size={24} color="gray" />}/>
+
         </>
     );
 }
@@ -65,6 +68,11 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         paddingLeft: 35,
     },
+    adicionar: {
+        position: "absolute",
+        right: 20,
+        bottom: 30
+    }
 });
 
 export default AddItems;

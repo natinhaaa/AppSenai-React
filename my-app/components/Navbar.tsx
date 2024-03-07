@@ -2,13 +2,9 @@ import React, { Children, PropsWithChildren } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-type NavbarProps = {
-    background: string
-}
-
-const Navbar = ({children}: any, {background}: NavbarProps) => {
+const Navbar = ({children}: any, {...props}) => {
     return (
-        <View style={{...styles.container, backgroundColor: background}}>
+        <View style={{...styles.container, backgroundColor: props.background}}>
             <StatusBar backgroundColor="black"/>
             <View style={styles.separar}>{children}</View>
         </View>
