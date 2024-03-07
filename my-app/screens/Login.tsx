@@ -14,10 +14,10 @@ function Login() {
             <Input texto={"Senha:"} placeholder={"Insira sua senha"}></Input>
             <Botao texto_botao={"Login"}></Botao>
             <View style={styles.bloco}>
-                <TouchableOpacity style={styles.clique}>
+                <TouchableOpacity>
                     <Text style={styles.texto2}>Cadastre-se</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.clique}>
+                <TouchableOpacity>
                     <Text style={styles.texto2}>Esqueceu a senha?</Text>
                 </TouchableOpacity>
             </View>
@@ -35,14 +35,11 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
 
-    clique: {
-        display: "flex",
-        alignItems: "center",
-    },
-
     bloco: {
         flexDirection: "row",
-        justifyContent: "space-around"
+        justifyContent: "space-between",
+        margin: 40,
+        marginTop: 0
     },
 
     texto2: {

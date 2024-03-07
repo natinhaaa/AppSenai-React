@@ -6,7 +6,7 @@ interface InputProps extends TextInputProps{
     texto: string
 }
 
-const Input =({texto, ...props}: InputProps) => {
+const Input2 =({texto, ...props}: InputProps) => {
     const [hover, setHover] = useState("#F5F5F5")
 
     const styles = StyleSheet.create({
@@ -14,22 +14,25 @@ const Input =({texto, ...props}: InputProps) => {
             marginLeft: 20
 
         },
+        texto: {
+            position: 'absolute',
+            backgroundColor: 'white',
+            paddingHorizontal: 8,
+            top: -6,
+            left: 12,
+            zIndex: 1,
+            fontSize: 12,
+            maxWidth: 110
+        },
 
         input: {
-            marginLeft: 20,
+            marginLeft: 10,
             width: 310,
             height: 35,
-            backgroundColor: '#F5F5F5',
             padding: 10,
             borderRadius: 5,
             borderWidth: 1,
             borderColor: hover
-        },
-
-        texto: {
-            fontSize: 12,
-            padding: 15,
-            marginLeft: 15
         }
     })
 
@@ -44,4 +47,4 @@ const Input =({texto, ...props}: InputProps) => {
     );
 }
 
-export default Input;
+export default Input2;

@@ -2,12 +2,12 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-type InputProps = {
+type Color_TextProps = {
     color: string,
     subtitle: string
 }
 
-const Header = ({color, subtitle}: InputProps) => {
+const Header = ({color, subtitle}: Color_TextProps) => {
     return (
         <View style={[styles.container, {backgroundColor: color}]}>
             <StatusBar backgroundColor="black"/>

@@ -1,56 +1,52 @@
 import React from 'react';
-import { View, StyleSheet, Text, TextInput } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import Navbar from '../components/Navbar';
+import Input2 from '../components/Inputs2';
+import Footer2 from '../components/Footer2';
 
 function AddItems() {
     return (
         <>
-            <View style={styles.container}>
-                <Navbar icon1={<AntDesign name="arrowleft" size={24} color="black" />} icon2={<AntDesign name="pluscircleo" size={24} color="black" />} text="Cadastro de itens" backgroundColor='#FF0000'/>
-                <View style={styles.formContainer}>
-                    <View style={styles.inputContainer}>
-                        <Text style={styles.label}>Nº Inventário *</Text>
-                        <TextInput style={styles.input} placeholder="Ex: 001"/>
-                    </View>
-
-                    <View style={styles.inputContainer}>
-                        <Text style={styles.label}>Descrição *</Text>
-                        <TextInput style={styles.input} placeholder="Ex: Notebook"/>
-                    </View>
-
-                    <View style={styles.inputContainer}>
-                        <Text style={styles.label}>Local * </Text>
-                        <TextInput style={styles.input} placeholder="Ex: Sala de reuniões"/>
-                    </View>
-
-                    <View style={styles.inputContainer}>
-                        <Text style={styles.label}>Responsável *</Text>
-                        <TextInput style={styles.input} placeholder="Ex: João Silva"
-                        />
-                    </View>
-
-                    <View style={styles.inputContainer}>
-                        <Text style={styles.label}>Data de Registro *</Text>
-                        <TextInput style={styles.input} placeholder="Ex: 10/10/10"/>
-                    </View>
-
+            <Navbar background={"#FF0000"}>
+                <TouchableOpacity>
+                    <AntDesign name="arrowleft" size={24} color="black" />
+                </TouchableOpacity>
+                <Text>Cadastro de Itens</Text>
+                <TouchableOpacity>
+                    <AntDesign name="pluscircleo" size={24} color="black" />
+                </TouchableOpacity>
+            </Navbar>
+            <View style={styles.blocoInputs}>
+                <View style={styles.inputContainer}>
+                    <Input2 texto={"Nº Inventário *"} style={styles.input} placeholder="Ex: 001"/>
+                </View>
+                <View style={styles.inputContainer}>
+                    <Input2 texto={"Descrição *"} style={styles.input} placeholder="Ex: Notebook"/>
+                </View>
+                <View style={styles.inputContainer}>
+                    <Input2 texto={"Local *"} style={styles.input} placeholder="Sala de reuniões"/>
+                </View>
+                <View style={styles.inputContainer}>
+                    <Input2 texto={"Responsável *"} style={styles.input} placeholder="Ex: João Silva"/>
+                </View>
+                <View style={styles.inputContainer}>
+                    <Input2 texto={"Data de Registro *"} style={styles.input} placeholder="Ex: 10/10/10"/>
                 </View>
             </View>
+            <Footer2/>            
         </>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    formContainer: {
+
+    blocoInputs: {
         paddingHorizontal: 20,
     },
     inputContainer: {
         position: 'relative',
-        marginTop: 30,
+        marginTop: 30
     },
     label: {
         position: 'absolute',
