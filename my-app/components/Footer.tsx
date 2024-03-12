@@ -1,34 +1,34 @@
-import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
-import { Ionicons, MaterialCommunityIcons, Foundation } from '@expo/vector-icons';
+import { StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
-const Footer = ({...props}) => {
+
+function Footer({...props}) {
     return (
-        <>
-            <View style={[styles.footer, {backgroundColor: props.color}]}>
-                <StatusBar backgroundColor="black"/>
-                    <TouchableOpacity style={styles.separar_icons}>{props.icon1}</TouchableOpacity>
-                    <TouchableOpacity style={styles.separar_icons}>{props.icon2}</TouchableOpacity>          
-            </View>
-            
-        </>
-    )
-}
+        <View style={[styles.container, {backgroundColor: props.color}]}>
+            <StatusBar style="dark"/>
+            <TouchableOpacity  style={styles.icon}>{props.icon1}</TouchableOpacity>
+            <TouchableOpacity style={styles.icon}>{props.icon2}</TouchableOpacity>
+        </View>
+    );
+};
 
 const styles = StyleSheet.create({
-    footer: {
-        backgroundColor: "red",
-        height: 60,
-        width: "100%",
+    container: {
+        width:"100%",
+        height: "100%",
+        flexDirection: "row",
+        alignSelf: "center",
         justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row"
+        gap: 20,
+        borderWidth: 1,
+        borderTopColor: "#F5F5F5"
     },
-    separar_icons: {
-        marginHorizontal: 5
+
+    icon:{
+        marginTop: 16,
+        height: 30,
+        width: 30
     }
+});
 
-})
-
-export default Footer;
+    export default Footer

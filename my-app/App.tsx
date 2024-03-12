@@ -10,6 +10,6 @@ import DescItem from './screens/DescItem';
 
 export default function App() {
   return (
-    <DescItem />
+    <AddItems />
   );
 }

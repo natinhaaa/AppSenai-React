@@ -1,32 +1,40 @@
 import React, { Children, PropsWithChildren } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
-const Navbar = ({children}: any, {...props}) => {
+const Navbar = ({...props}) => {
     return (
-        <View style={{...styles.container, backgroundColor: props.background}}>
-            <StatusBar backgroundColor="black"/>
-            <View style={styles.separar}>{children}</View>
+        <View style={[styles.container, {backgroundColor: props.color}]}>
+            <StatusBar style="dark"/>
+            <TouchableOpacity>{props.icon1}</TouchableOpacity>
+            <Text style={[styles.texto, {color: props.cortexto}]}>{props.texto}</Text>
+            <TouchableOpacity>{props.icon2}</TouchableOpacity>
         </View>
     );
-}
+};
+
 
 const styles = StyleSheet.create({
 
     container: {
+        width:"100%",
         height: 60,
-        width: "100%",
-        marginTop: 30,
+        flexDirection: "row",
+        justifyContent: "space-between",
         borderBottomWidth: 1,
-        borderBottomColor: "#F5F5F5",
-        padding: 8,
-        justifyContent: "center"
+        borderBottomColor: "#f5f5f5",
+        gap: 10,
+        marginTop: 30,
+        paddingTop: 15,
+        paddingLeft: 20,
+        paddingRight: 20
     },
 
-    separar: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between"        
+
+    texto: {
+        marginTop: 5,
+        fontSize: 14,
+        fontWeight: "600"
     }
 
 })

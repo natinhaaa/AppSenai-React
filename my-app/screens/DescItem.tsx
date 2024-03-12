@@ -1,42 +1,43 @@
-import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import BlocoDesc from '../components/BlocoDesc';
-import { Ionicons, MaterialCommunityIcons, Foundation, MaterialIcons } from '@expo/vector-icons';
-
+import { View, StyleSheet, ScrollView, TouchableOpacity, Text } from "react-native"
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { Octicons, Feather, AntDesign } from '@expo/vector-icons';
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import BlocoDesc from "../components/BlocoDesc";
 
 function DescItem() {
     return (
         <>
-            <Navbar background= "#FF0000">
-                <TouchableOpacity>
-                    <AntDesign name="arrowleft" size={24} color="black" />
-                </TouchableOpacity>
-                <Text>Descrição do item</Text>
-                <TouchableOpacity>
-                    <AntDesign name="reload1" size={24} color="black" />
-                </TouchableOpacity>
-            </Navbar>
-            <BlocoDesc titulo={"Nº do Inventário:"} descriçao={"957689"}/>
-            <BlocoDesc titulo={"Descrição:"} descriçao={"CADEIRA GIRATÓRIA"}/>
-            <BlocoDesc titulo={"Local:"} descriçao={"SALA C13"}/>
-            <BlocoDesc titulo={"Responsável:"} descriçao={"CARLOS"}/>
-            <BlocoDesc titulo={"Data de Registro:"} descriçao={"05/03/2024"}/>
-            <MaterialCommunityIcons style={styles.editar} name="pencil-circle" size={24} color="red" />
-            <Footer color="#FFFFFF" icon1={<MaterialCommunityIcons name="camera-flip-outline" size={24} color="gray" />} icon2={<Foundation name="list-number" size={24} color="gray" />}/>
+            <View style={styles.container}>
+                <Navbar color = "#ff0000" icon1={<AntDesign name="arrowleft" size={24} color="white" />} color2="#ffffff" texto="Cadastro de Itens" icon2={<AntDesign name="pluscircleo" size={24} color="white" />}/> 
+                <Text>AHNSDIAJHNFIJSAHNFUANFJSAHNFNAIJHNSAUF</Text>
+                <ScrollView>
+                    <View style={styles.blocoItens}>
+                        <BlocoDesc titulo="N° do Inventário:" descriçao="957689"/>
+                        <BlocoDesc titulo="Descrição:" descriçao="CADEIRA GIRATÓRIA"/>
+                        <BlocoDesc titulo="Local:" descriçao="SALA C13"/>
+                        <BlocoDesc titulo="Responsável:" descriçao="CARLOS"/>
+                        <BlocoDesc titulo="Data de Registro" descriçao="05/03/2024"/>
+                    </View>
+                </ScrollView>
+                <Footer color="#ffffff" icon1={<MaterialCommunityIcons name="camera-flip" size={24} color="gray" />} icon2 = {<FontAwesome5 name="list-ol" size={24} color="gray" />}/>
+            </View>
         </>
-    );
+        
+    )
+}
+const styles = StyleSheet.create({
+
+container:{
+    flex: 1
+},
+
+blocoItens:{
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#fbfbfb"
 }
 
-const styles = StyleSheet.create({
-    editar: {
-        position: "absolute",
-        right: 20,
-        bottom: 80
-    }
-    
-});
-
-export default DescItem;
+})
+export default DescItem

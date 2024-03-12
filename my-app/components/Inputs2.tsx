@@ -31,15 +31,22 @@ const Input2 =({texto, ...props}: InputProps) => {
             height: 35,
             padding: 10,
             borderRadius: 5,
-            borderWidth: 1,
-            borderColor: hover
+            borderWidth: 2,
+            borderColor: hover,
+            marginBottom: 35
+        },
+
+        asterisco: {
+            color: "red"
         }
     })
 
     return (
         <>
             <View style={styles.container}>
-                <Text style={styles.texto}>{texto}</Text>
+                <Text style={styles.texto}>{texto}
+                    <Text style={styles.asterisco}> *</Text>
+                </Text>
                 <TextInput {...props} style={styles.input} onFocus={() => {setHover("#F39200")}} onBlur={() => {setHover("#F5F5F5")}}/>
             </View>
         </>

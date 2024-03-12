@@ -1,78 +1,36 @@
-import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, } from "react-native"
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
+import Navbar from "../components/Navbar";
 import { AntDesign } from '@expo/vector-icons';
-import Navbar from '../components/Navbar';
-import Input2 from '../components/Inputs2';
-import Footer from '../components/Footer';
-import { Ionicons, MaterialCommunityIcons, Foundation } from '@expo/vector-icons';
-
+import Input2 from "../components/Inputs2";
+import Footer from "../components/Footer";
 
 function AddItems() {
     return (
-        <>
-            <Navbar background= "#FF0000">
-                <TouchableOpacity>
-                    <AntDesign name="arrowleft" size={24} color="black" />
-                </TouchableOpacity>
-                <Text>Cadastro de Itens</Text>
-                <TouchableOpacity>
-                    <AntDesign name="pluscircleo" size={24} color="black" />
-                </TouchableOpacity>
-            </Navbar>
+        <View style={styles.container}>
+            <Navbar color="red" icon1={<AntDesign name="arrowleft" size={24} color="white" />} cortexto="white" texto="Cadastro de Itens" icon2={<AntDesign name="pluscircleo" size={24} color="white" />}/> 
             <View style={styles.blocoInputs}>
-                <View style={styles.inputContainer}>
-                    <Input2 texto={"Nº Inventário *"} style={styles.input} placeholder="Ex: 001"/>
-                </View>
-                <View style={styles.inputContainer}>
-                    <Input2 texto={"Descrição *"} style={styles.input} placeholder="Ex: Notebook"/>
-                </View>
-                <View style={styles.inputContainer}>
-                    <Input2 texto={"Local *"} style={styles.input} placeholder="Sala de reuniões"/>
-                </View>
-                <View style={styles.inputContainer}>
-                    <Input2 texto={"Responsável *"} style={styles.input} placeholder="Ex: João Silva"/>
-                </View>
-                <View style={styles.inputContainer}>
-                    <Input2 texto={"Data de Registro *"} style={styles.input} placeholder="Ex: 10/10/10"/>
-                </View>
+                <Input2 texto={"Nº Inventário"} placeholder="Ex: 001"/>
+                <Input2 texto={"Descrição"} placeholder="Ex: Notebook"/>
+                <Input2 texto={"Local"} placeholder="Sala de reuniões"/>
+                <Input2 texto={"Responsável"} placeholder="Ex: João Silva"/>
+                <Input2 texto={"Data de Registro"} placeholder="Ex: 10/10/10"/>
+    
             </View>
-            <Footer color="#FFFFFF" icon1={<MaterialCommunityIcons name="camera-flip-outline" size={24} color="gray" />} icon2={<Foundation name="list-number" size={24} color="gray" />}/>
-
-        </>
-    );
+            <Footer color="white" icon1={<MaterialCommunityIcons name="camera-flip" size={24} color="#000000" />} icon2 = {<FontAwesome5 name="list-ol" size={24} color="#000000" />}/>
+        </View>
+    )
 }
-
 const styles = StyleSheet.create({
-
-    blocoInputs: {
-        paddingHorizontal: 20,
+    blocoInputs:{
+        marginTop: 30,
+        height: 670
     },
-    inputContainer: {
-        position: 'relative',
-        marginTop: 30
-    },
-    label: {
-        position: 'absolute',
-        backgroundColor: 'white',
-        paddingHorizontal: 8,
-        top: -6,
-        left: 12,
-        zIndex: 1,
-        fontSize: 12,
-        maxWidth: 110,
-    },
-    input: {
-        height: 40,
-        borderRadius: 5,
-        borderColor: 'gray',
-        borderWidth: 1,
-        paddingLeft: 35,
-    },
-    adicionar: {
-        position: "absolute",
-        right: 20,
-        bottom: 30
+    container: {
+        backgroundColor: "white"
     }
-});
 
-export default AddItems;
+})
+
+export default AddItems
