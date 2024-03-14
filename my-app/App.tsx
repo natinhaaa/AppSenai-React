@@ -7,9 +7,10 @@ import Load from './screens/Load';
 import Inventarios from './screens/Inventarios';
 import AddItems from './screens/AddItems';
 import DescItem from './screens/DescItem';
+import Scanner from './screens/Scanner';
 
 export default function App() {
   return (
-    <AddItems />
+    <Scanner />
   );
 }

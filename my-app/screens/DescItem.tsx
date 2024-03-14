@@ -10,8 +10,7 @@ function DescItem() {
     return (
         <>
             <View style={styles.container}>
-                <Navbar color = "#ff0000" icon1={<AntDesign name="arrowleft" size={24} color="white" />} color2="#ffffff" texto="Cadastro de Itens" icon2={<AntDesign name="pluscircleo" size={24} color="white" />}/> 
-                <Text>AHNSDIAJHNFIJSAHNFUANFJSAHNFNAIJHNSAUF</Text>
+                <Navbar color="#FF0000" icon1={<AntDesign name="arrowleft" size={24} color="white" />} cortexto="white" texto="Cadastro de Itens" icon2={<AntDesign name="pluscircleo" size={24} color="white" />}/> 
                 <ScrollView>
                     <View style={styles.blocoItens}>
                         <BlocoDesc titulo="N° do Inventário:" descriçao="957689"/>
@@ -21,7 +20,10 @@ function DescItem() {
                         <BlocoDesc titulo="Data de Registro" descriçao="05/03/2024"/>
                     </View>
                 </ScrollView>
-                <Footer color="#ffffff" icon1={<MaterialCommunityIcons name="camera-flip" size={24} color="gray" />} icon2 = {<FontAwesome5 name="list-ol" size={24} color="gray" />}/>
+                <TouchableOpacity>
+                    <MaterialCommunityIcons style={styles.editar} name="pencil-circle" size={55} color="red" />
+                </TouchableOpacity>
+                <Footer color="#FFFFFF" icon1={<MaterialCommunityIcons name="camera-flip" size={24} color="gray" />} icon2 = {<FontAwesome5 name="list-ol" size={24} color="gray" />}/>
             </View>
         </>
         
@@ -29,15 +31,22 @@ function DescItem() {
 }
 const styles = StyleSheet.create({
 
-container:{
-    flex: 1
-},
+    container:{
+        flex: 1
+    },
 
-blocoItens:{
-    width: "100%",
-    height: "100%",
-    backgroundColor: "#fbfbfb"
-}
+    blocoItens:{
+        width: "100%",
+        height: "100%",
+        backgroundColor: "white"
+    },
+
+    editar: {
+        position: "absolute",
+        right: 20,
+        bottom: 20
+    }
 
 })
+
 export default DescItem

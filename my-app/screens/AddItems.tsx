@@ -16,7 +16,6 @@ function AddItems() {
                 <Input2 texto={"Local"} placeholder="Sala de reuniões"/>
                 <Input2 texto={"Responsável"} placeholder="Ex: João Silva"/>
                 <Input2 texto={"Data de Registro"} placeholder="Ex: 10/10/10"/>
-    
             </View>
             <Footer color="white" icon1={<MaterialCommunityIcons name="camera-flip" size={24} color="#000000" />} icon2 = {<FontAwesome5 name="list-ol" size={24} color="#000000" />}/>
         </View>

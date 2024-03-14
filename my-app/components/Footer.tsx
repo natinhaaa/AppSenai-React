@@ -15,12 +15,12 @@ function Footer({...props}) {
 const styles = StyleSheet.create({
     container: {
         width:"100%",
-        height: "100%",
+        height: 60,
         flexDirection: "row",
         alignSelf: "center",
         justifyContent: "center",
         gap: 20,
-        borderWidth: 1,
+        borderTopWidth: 1,
         borderTopColor: "#F5F5F5"
     },
 
