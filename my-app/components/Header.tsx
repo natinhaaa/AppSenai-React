@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 
     subtitulo: {
         color: "white",
-        marginTop: 5
+        marginTop: 10
     }
 })
 

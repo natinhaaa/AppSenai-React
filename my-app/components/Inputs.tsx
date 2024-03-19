@@ -29,7 +29,8 @@ const Input =({texto, ...props}: InputProps) => {
         texto: {
             fontSize: 12,
             padding: 15,
-            marginLeft: 15
+            marginLeft: 15,
+            marginTop: 10
         }
     })
 

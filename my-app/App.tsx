@@ -8,9 +8,10 @@ import Inventarios from './screens/Inventarios';
 import AddItems from './screens/AddItems';
 import DescItem from './screens/DescItem';
 import Scanner from './screens/Scanner';
+import Editar from './screens/Editar';
 
 export default function App() {
   return (
-    <Scanner />
+    <Editar />
   );
 }

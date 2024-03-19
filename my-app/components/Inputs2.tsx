@@ -28,7 +28,7 @@ const Input2 =({texto, ...props}: InputProps) => {
         input: {
             marginLeft: 10,
             width: 310,
-            height: 35,
+            height: 40,
             padding: 10,
             borderRadius: 5,
             borderWidth: 2,

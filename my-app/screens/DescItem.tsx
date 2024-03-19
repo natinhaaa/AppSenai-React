@@ -23,7 +23,7 @@ function DescItem() {
                 <TouchableOpacity>
                     <MaterialCommunityIcons style={styles.editar} name="pencil-circle" size={55} color="red" />
                 </TouchableOpacity>
-                <Footer color="#FFFFFF" icon1={<MaterialCommunityIcons name="camera-flip" size={24} color="gray" />} icon2 = {<FontAwesome5 name="list-ol" size={24} color="gray" />}/>
+                <Footer color="#FFFFFF" icon1={<MaterialCommunityIcons name="camera-flip" size={24} color="#595959" />} icon2 = {<FontAwesome5 name="list-ol" size={24} color="#595959" />}/>
             </View>
         </>
         
@@ -36,8 +36,7 @@ const styles = StyleSheet.create({
     },
 
     blocoItens:{
-        width: "100%",
-        height: "100%",
+        height: 680,
         backgroundColor: "white"
     },
 
