@@ -5,7 +5,6 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 const Navbar = ({...props}) => {
     return (
         <View style={[styles.container, {backgroundColor: props.color}]}>
-            <StatusBar style="dark"/>
             <TouchableOpacity>{props.icon1}</TouchableOpacity>
             <Text style={[styles.texto, {color: props.cortexto}]}>{props.texto}</Text>
             <TouchableOpacity>{props.icon2}</TouchableOpacity>
@@ -24,7 +23,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: "#f5f5f5",
         gap: 10,
-        marginTop: 30,
+        marginTop: 10,
         paddingTop: 15,
         paddingLeft: 20,
         paddingRight: 20

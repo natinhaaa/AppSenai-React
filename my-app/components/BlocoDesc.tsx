@@ -5,7 +5,6 @@ import { StyleSheet, Text, View } from 'react-native';
 const BlocoDesc = ({...props}) => {
     return (
         <View style={styles.container}>
-            <StatusBar backgroundColor="black"/>
             <View style={styles.conteudo}>
                 <Text style={styles.title}>{props.titulo}</Text>
                 <Text>{props.descriçao}</Text>

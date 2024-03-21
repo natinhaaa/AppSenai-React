@@ -24,7 +24,7 @@ function AddItems() {
 const styles = StyleSheet.create({
     blocoInputs:{
         marginTop: 30,
-        height: 680
+        height: 665
     },
     container: {
         backgroundColor: "white"

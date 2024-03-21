@@ -5,11 +5,12 @@ import Navbar from "../components/Navbar";
 import { AntDesign } from '@expo/vector-icons';
 import Input2 from "../components/Inputs2";
 import Footer from "../components/Footer";
+import { Link } from "expo-router";
 
 function Editar() {
     return (
         <View style={styles.container}>
-            <Navbar color="red" icon1={<AntDesign name="arrowleft" size={24} color="white" />} cortexto="white" texto="Editar" icon2={<AntDesign name="checkcircle" size={24} color="white" />}/> 
+            <Navbar color="red" icon1={<AntDesign name="arrowleft" size={24} color="white" />} cortexto="white" texto="Editar" icon2={<Link href="/DescItem"><AntDesign name="checkcircle" size={30} color="white" /></Link>}/> 
             <View style={styles.blocoInputs}>
                 <Input2 texto={"Nº Inventário"} placeholder="957689"/>
                 <Input2 texto={"Descrição"} placeholder="CADEIRA GIRATÓRIA"/>
@@ -24,7 +25,7 @@ function Editar() {
 const styles = StyleSheet.create({
     blocoInputs:{
         marginTop: 30,
-        height: 670
+        height: 660
     },
     container: {
         backgroundColor: "white"

@@ -2,10 +2,9 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-const BlocoCadeira = () => {
+function BlocoCadeira () {
     return (
         <View style={styles.container}>
-            <StatusBar backgroundColor="black"/>
             <View style={styles.conteudo}>
                 <Text style={styles.numero}>956389</Text>
                 <Text>CADEIRA SENAI</Text>
@@ -28,7 +27,8 @@ const styles = StyleSheet.create({
     },
 
     conteudo: {
-        marginLeft: 10
+        marginLeft: 15,
+        width: 380
     },
 
     numero: {

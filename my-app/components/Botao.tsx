@@ -1,14 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-type InputProps = {
-    texto_botao: string
+type TouchableOpacityProps = {
+    texto_botao: string,
+    onPress: () => void;
 }
 
-const Botao = ({texto_botao}: InputProps) => {
+const Botao = ({texto_botao, onPress}: TouchableOpacityProps) => {
     return(
         <View style= {styles.container}>
-            <TouchableOpacity style={styles.botao}>
+            <TouchableOpacity style={styles.botao} onPress={onPress}>
                 <Text style={styles.acessar}>{texto_botao}</Text>
             </TouchableOpacity>
         </View>
