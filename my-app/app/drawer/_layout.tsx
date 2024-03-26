@@ -1,6 +1,10 @@
 import { Drawer } from 'expo-router/drawer'
 
 export default function DrawerLayout() {
-    return  <Drawer />
+    return <Drawer screenOptions={{
+        headerShown: false
+    }}>
+        <Drawer.Screen name= "home" />
+    </Drawer>
     
 }

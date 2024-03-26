@@ -20,6 +20,9 @@ export default function Layout() {
             <Stack.Screen name="RecSenha" options={{
                 statusBarColor: "#011E83"
             }}></Stack.Screen>
+            <Stack.Screen name="drawer" options={{
+                headerShown: false
+            }}></Stack.Screen>
             
 
         </Stack>

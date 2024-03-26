@@ -14,7 +14,7 @@ function Login() {
             <Text style={styles.texto}>Faça Login para Acessar o Sistema!</Text>
             <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"}></Input>
             <Input texto={"Senha:"} placeholder={"Insira sua senha"}></Input>
-            <Link href="/Inventarios" asChild>
+            <Link href="drawer">
                 <Botao texto_botao={"Login"} onPress={Login}></Botao>
             </Link>
             
