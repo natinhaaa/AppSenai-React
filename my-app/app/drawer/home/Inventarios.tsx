@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, TouchableOpacity, Text, StyleSheet, View } from 'react-native';
 import { Octicons, AntDesign, Feather } from '@expo/vector-icons';
-import Navbar from '../components/Navbar';
-import BlocoCadeira from '../components/BlocoCadeira';
-import Footer from '../components/Footer';
+import Navbar from '../../../components/Navbar';
+import BlocoCadeira from '../../../components/BlocoCadeira';
+import Footer from '../../../components/Footer';
 import { Ionicons, MaterialCommunityIcons, Foundation } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 

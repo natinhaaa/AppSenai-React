@@ -15,7 +15,7 @@ function Cadastro() {
                     <Input style={styles.input} texto={"E-mail:"} placeholder={"Digite seu e-mail"}></Input>
                     <Input style={styles.input} texto={"Senha:"} placeholder={"Digite uma senha"} secureTextEntry></Input>
                     <Input style={styles.input} texto={"Confirmar senha:"} placeholder={"Confirme a senha"} secureTextEntry></Input>
-                    <Botao texto_botao={"Cadastre-se"}></Botao>
+                    <Botao texto_botao={"Cadastre-se"} onPress={Cadastro}></Botao>
             </ScrollView>
         </>
     );
