@@ -1,18 +1,21 @@
+import { LinkProps } from 'next/link';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Link } from 'expo-router';
 
-type TouchableOpacityProps = {
-    texto_botao: string,
-    onPress: () => void;
-}
+interface props extends LinkProps{
+    texto_botao: string;
+};
 
-const Botao = ({texto_botao, onPress}: TouchableOpacityProps) => {
+const Botao = ({texto_botao, ...props}: props) => {
     return(
-        <View style= {styles.container}>
-            <TouchableOpacity style={styles.botao} onPress={onPress}>
-                <Text style={styles.acessar}>{texto_botao}</Text>
-            </TouchableOpacity>
-        </View>
+        <Link {...props} style= {styles.container}>
+            <View>
+                <TouchableOpacity style={styles.botao}>
+                    <Text style={styles.acessar}>{texto_botao}</Text>
+                </TouchableOpacity>
+            </View>
+        </Link>
     )
     
 }
@@ -21,8 +24,7 @@ const Botao = ({texto_botao, onPress}: TouchableOpacityProps) => {
 const styles = StyleSheet.create({
     
     container: {
-        display: "flex",
-        alignItems: "center"
+        alignSelf: "center"
     },
 
     botao: {

@@ -4,6 +4,7 @@ import Header from '@comp/Header';
 import Input from '@comp/Inputs';
 import Botao from '@comp/Botao';
 
+
 function Cadastro() {
     return (
         <>
@@ -15,7 +16,7 @@ function Cadastro() {
                     <Input style={styles.input} texto={"E-mail:"} placeholder={"Digite seu e-mail"}></Input>
                     <Input style={styles.input} texto={"Senha:"} placeholder={"Digite uma senha"} secureTextEntry></Input>
                     <Input style={styles.input} texto={"Confirmar senha:"} placeholder={"Confirme a senha"} secureTextEntry></Input>
-                    <Botao texto_botao={"Cadastre-se"} onPress={Cadastro}></Botao>
+                <Botao texto_botao={"Cadastre-se"} href="TelasIniciais/Login"></Botao>
             </ScrollView>
         </>
     );

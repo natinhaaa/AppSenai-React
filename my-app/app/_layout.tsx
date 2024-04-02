@@ -15,9 +15,6 @@ export default function Layout() {
             headerTintColor: "white",
             headerTitle: ""
         }}/>
-        <Stack.Screen name='' options={{
-            headerShown: false
-        }}/>
         </Stack>
     )
 }

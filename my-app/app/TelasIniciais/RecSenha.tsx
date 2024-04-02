@@ -10,8 +10,8 @@ function RecSenha () {
             <Header color={"#011E83"} subtitle={"Recuperação de senha"}></Header>
             <Text style={styles.texto}>Insira seu e-mail para recuperar a senha!</Text>
             <StatusBar backgroundColor="black"/>
-                <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"}></Input>
-                <Botao texto_botao={"Recuperar senha"}></Botao>
+            <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"}></Input>
+            <Botao texto_botao={"Recuperar senha"} href="TelasIniciais/Login"></Botao>
         </View>
     )
 }

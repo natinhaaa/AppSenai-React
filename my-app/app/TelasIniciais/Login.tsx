@@ -10,21 +10,19 @@ function Login() {
     return (
         <View>
             <StatusBar backgroundColor="black"/>
-            <Header color={"#000000"} subtitle={"Login"}></Header>
+            <Header color={"#000000"} subtitle={"Login"} />
             <Text style={styles.texto}>Faça Login para Acessar o Sistema!</Text>
-            <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"}></Input>
-            <Input texto={"Senha:"} placeholder={"Insira sua senha"}></Input>
-            <Link href="drawer">
-                <Botao texto_botao={"Login"} onPress={Login}></Botao>
-            </Link>
+            <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"} />
+            <Input texto={"Senha:"} placeholder={"Insira sua senha"}/>
+            <Botao texto_botao="Login" href="TelasIniciais/Login"/>
             
             <View style={styles.bloco}>
-                <Link href="/Cadastro" asChild>
+                <Link href="TelasIniciais/Cadastro" asChild>
                     <TouchableOpacity>
                         <Text style={styles.texto2}>Cadastre-se</Text>
                     </TouchableOpacity>
                 </Link>
-                <Link href="/RecSenha" asChild>
+                <Link href="TelasIniciais/RecSenha" asChild>
                     <TouchableOpacity>
                         <Text style={styles.texto2}>Esqueceu a senha?</Text>
                     </TouchableOpacity>
