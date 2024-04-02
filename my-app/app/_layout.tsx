@@ -1,30 +1,23 @@
-import { Stack } from "expo-router";
+import { Stack } from 'expo-router';
 
 export default function Layout() {
-    return (
-        <Stack screenOptions={{
+    return (<Stack>
+        <Stack.Screen name='index' options={{
+            headerShown: false
+        }}/>
+        <Stack.Screen name='TelasIniciais/Cadastro' options={{
             headerTransparent: true,
-            headerTintColor: 'white',
-            headerTitle: "",
-            statusBarStyle: 'light'
-            
-        }}>
-            <Stack.Screen name="index" options={{
-                statusBarColor: "#000000"
-            }}></Stack.Screen>
-
-            <Stack.Screen name="Cadastro" options={{
-                statusBarColor: "#FF0000"
-            }}></Stack.Screen>
-
-            <Stack.Screen name="RecSenha" options={{
-                statusBarColor: "#011E83"
-            }}></Stack.Screen>
-            <Stack.Screen name="drawer" options={{
-                headerShown: false
-            }}></Stack.Screen>
-            
-
+            headerTintColor: "white",
+            headerTitle: ""
+        }}/>
+        <Stack.Screen name='TelasIniciais/RecSenha' options={{
+            headerTransparent: true,
+            headerTintColor: "white",
+            headerTitle: ""
+        }}/>
+        <Stack.Screen name='' options={{
+            headerShown: false
+        }}/>
         </Stack>
     )
 }

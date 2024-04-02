@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, } from "react-native"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-import Navbar from "../components/Navbar";
+import Navbar from "@comp/Navbar";
 import { AntDesign } from '@expo/vector-icons';
-import Input2 from "../components/Inputs2";
-import Footer from "../components/Footer";
+import Input2 from "@comp/Inputs2";
+import Footer from "@comp/Footer";
 
 function AddItems() {
     return (

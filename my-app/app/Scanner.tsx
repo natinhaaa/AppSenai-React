@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { AntDesign, MaterialCommunityIcons, FontAwesome5, MaterialIcons, Ionicons } from '@expo/vector-icons';
-import Navbar from '../../../components/Navbar';
-import Footer from '../../../components/Footer';
+import Navbar from '@comp/Navbar';
+import Footer from '@comp/Footer';
 
 function Scanner() {
     return (

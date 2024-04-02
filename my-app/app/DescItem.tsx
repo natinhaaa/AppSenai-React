@@ -2,9 +2,9 @@ import { View, StyleSheet, ScrollView, TouchableOpacity, Text } from "react-nati
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Octicons, Feather, AntDesign } from '@expo/vector-icons';
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import BlocoDesc from "../components/BlocoDesc";
+import Footer from "@comp/Footer";
+import Navbar from "@comp/Navbar";
+import BlocoDesc from "@comp/BlocoDesc";
 import { Link } from "expo-router";
 
 function DescItem() {

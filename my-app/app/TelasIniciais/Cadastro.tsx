@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet } from 'react-native';
-import Header from '../components/Header';
-import Input from '../components/Inputs';
-import Botao from '../components/Botao';
+import Header from '@comp/Header';
+import Input from '@comp/Inputs';
+import Botao from '@comp/Botao';
 
 function Cadastro() {
     return (

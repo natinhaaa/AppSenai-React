@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet } from "react-native"
 import { StatusBar } from "expo-status-bar"
-import Input from "../components/Inputs"
-import Botao from "../components/Botao"
-import Header from "../components/Header"
+import Input from "@comp/Inputs"
+import Botao from "@comp/Botao"
+import Header from "@comp/Header"
 
 function RecSenha () {
     return (
