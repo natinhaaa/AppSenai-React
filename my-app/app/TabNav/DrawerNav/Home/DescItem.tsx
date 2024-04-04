@@ -2,8 +2,6 @@ import { View, StyleSheet, ScrollView, TouchableOpacity, Text } from "react-nati
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Octicons, Feather, AntDesign } from '@expo/vector-icons';
-import Footer from "@comp/Footer";
-import Navbar from "@comp/Navbar";
 import BlocoDesc from "@comp/BlocoDesc";
 import { Link } from "expo-router";
 
@@ -11,7 +9,6 @@ function DescItem() {
     return (
         <>
             <View style={styles.container}>
-                <Navbar color="#FF0000" icon1={<AntDesign name="arrowleft" size={24} color="white" />} cortexto="white" texto="Descrição do item" icon2={<AntDesign name="pluscircleo" size={24} color="white" />}/> 
                 <ScrollView>
                     <View style={styles.blocoItens}>
                         <BlocoDesc titulo="N° do Inventário:" descriçao="957689"/>
@@ -27,7 +24,6 @@ function DescItem() {
                     </TouchableOpacity>
                 </Link>
                 
-                <Footer color="#FFFFFF" icon1={<MaterialCommunityIcons name="camera-flip" size={24} color="#595959" />} icon2 = {<FontAwesome5 name="list-ol" size={24} color="#595959" />}/>
             </View>
         </>
         

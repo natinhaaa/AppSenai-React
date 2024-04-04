@@ -15,6 +15,9 @@ export default function Layout() {
             headerTintColor: "white",
             headerTitle: ""
         }}/>
+        <Stack.Screen name='TabNav' options={{
+            headerShown: false
+        }}/>
         </Stack>
     )
 }

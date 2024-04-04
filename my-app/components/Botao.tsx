@@ -9,12 +9,10 @@ interface props extends LinkProps{
 
 const Botao = ({texto_botao, ...props}: props) => {
     return(
-        <Link {...props} style= {styles.container}>
-            <View>
-                <TouchableOpacity style={styles.botao}>
-                    <Text style={styles.acessar}>{texto_botao}</Text>
-                </TouchableOpacity>
-            </View>
+        <Link {...props} style= {styles.container} asChild>
+            <TouchableOpacity style={styles.botao}>
+                <Text style={styles.acessar}>{texto_botao}</Text>
+            </TouchableOpacity>
         </Link>
     )
     
@@ -38,7 +36,7 @@ const styles = StyleSheet.create({
     
     acessar: {
         color: 'white',
-        textAlign: 'center',
+        textAlign: 'center'
     },
 })
 

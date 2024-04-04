@@ -14,7 +14,7 @@ function Login() {
             <Text style={styles.texto}>Faça Login para Acessar o Sistema!</Text>
             <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"} />
             <Input texto={"Senha:"} placeholder={"Insira sua senha"}/>
-            <Botao texto_botao="Login" href="TelasIniciais/Login"/>
+            <Botao texto_botao="Login" href="TabNav/Scanner"/>
             
             <View style={styles.bloco}>
                 <Link href="TelasIniciais/Cadastro" asChild>
