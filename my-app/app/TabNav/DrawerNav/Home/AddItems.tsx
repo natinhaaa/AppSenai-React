@@ -4,17 +4,19 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import Input2 from "@comp/Inputs2";
 
-function AddItems() {
+export default function AddItems() {
     return (
-        <View style={styles.container}>
-            <View style={styles.blocoInputs}>
-                <Input2 texto={"Nº Inventário"} placeholder="Ex: 001"/>
-                <Input2 texto={"Descrição"} placeholder="Ex: Notebook"/>
-                <Input2 texto={"Local"} placeholder="Sala de reuniões"/>
-                <Input2 texto={"Responsável"} placeholder="Ex: João Silva"/>
-                <Input2 texto={"Data de Registro"} placeholder="Ex: 10/10/10"/>
+        <>
+            <View style={styles.container}>
+                <View style={styles.blocoInputs}>
+                    <Input2 texto={"Nº Inventário"} placeholder="Ex: 001"/>
+                    <Input2 texto={"Descrição"} placeholder="Ex: Notebook"/>
+                    <Input2 texto={"Local"} placeholder="Sala de reuniões"/>
+                    <Input2 texto={"Responsável"} placeholder="Ex: João Silva"/>
+                    <Input2 texto={"Data de Registro"} placeholder="Ex: 10/10/10"/>
+                </View>
             </View>
-        </View>
+        </>
     )
 }
 const styles = StyleSheet.create({
@@ -27,5 +29,3 @@ const styles = StyleSheet.create({
     }
 
 })
-
-export default AddItems

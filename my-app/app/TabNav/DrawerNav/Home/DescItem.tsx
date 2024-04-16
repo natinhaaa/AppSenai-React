@@ -5,7 +5,7 @@ import { Octicons, Feather, AntDesign } from '@expo/vector-icons';
 import BlocoDesc from "@comp/BlocoDesc";
 import { Link } from "expo-router";
 
-function DescItem() {
+export default function DescItem() {
     return (
         <>
             <View style={styles.container}>
@@ -47,5 +47,3 @@ const styles = StyleSheet.create({
     }
 
 })
-
-export default DescItem

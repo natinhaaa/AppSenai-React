@@ -1,14 +1,16 @@
 import React from 'react';
 import { View, StyleSheet, Image, ActivityIndicator } from 'react-native';
 
-function Load() {
+export default function Load() {
     return (
-        <View style={styles.container}>
-            <View style={styles.background}>
-                <Image source={require('@assets/senai_logo.png')} style={styles.logo}/>
-                <ActivityIndicator size="large" color="#fff" style={styles.loader}/>
+        <>
+            <View style={styles.container}>
+                <View style={styles.background}>
+                    <Image source={require('@assets/senai_logo.png')} style={styles.logo}/>
+                    <ActivityIndicator size="large" color="#fff" style={styles.loader}/>
+                </View>
             </View>
-        </View>
+        </>
     );
 }
 
@@ -39,5 +41,3 @@ const styles = StyleSheet.create({
         marginTop: 20
     }
 })
-
-export default Load;

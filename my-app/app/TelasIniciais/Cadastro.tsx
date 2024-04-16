@@ -3,13 +3,17 @@ import { ScrollView, StyleSheet } from 'react-native';
 import Header from '@comp/Header';
 import Input from '@comp/Inputs';
 import Botao from '@comp/Botao';
+import { useColor } from '../../temas/tema';
+import { useColorScheme } from 'react-native';
 
 
-function Cadastro() {
+const cores = useColor()
+
+export default function Cadastro() {
     return (
         <>
             <ScrollView>
-                <Header color={"#FF0000"} subtitle={"Cadastre-se"}></Header>
+                <Header color={cores.bgPrimary} subtitle={"Cadastre-se"}></Header>
                 <StatusBar backgroundColor="black"/>
                     <Input style={styles.input} texto={"Nome:"} placeholder={"Digite seu nome"}></Input>
                     <Input style={styles.input} texto={"Sobrenome:"} placeholder={"Digite seu sobrenome"}></Input>
@@ -28,5 +32,3 @@ const styles = StyleSheet.create({
         color: "white"
     }
 })
-
-export default Cadastro;

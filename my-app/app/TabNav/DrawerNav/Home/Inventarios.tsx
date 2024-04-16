@@ -6,11 +6,11 @@ import { Ionicons, MaterialCommunityIcons, Foundation } from '@expo/vector-icons
 import { Link } from 'expo-router';
 
 
-function Inventarios() {
+export default function Inventarios() {
     return (
     <>
         <ScrollView style={{flex: 1}}>
-            <Link href="Home/DescItem">
+            <Link href="/DescItem">
                 <BlocoCadeira />
             </Link>
             <Link href="Home/DescItem">
@@ -67,7 +67,7 @@ function Inventarios() {
         </Link>
         
     </>
-);
+    )
 }
 
 const styles = StyleSheet.create({
@@ -79,5 +79,3 @@ const styles = StyleSheet.create({
     }
 
 })
-
-export default Inventarios;
