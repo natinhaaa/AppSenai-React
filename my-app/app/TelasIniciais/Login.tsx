@@ -1,20 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, StyleSheet, useColorScheme, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Header from '@comp/Header';
 import Input from '@comp/Inputs';
 import Botao from '@comp/Botao';
 import { Link } from 'expo-router';
 import { useColor } from '../../temas/tema';
 
-const cores = useColor()
-
 export default function Login() {
+    const cores = useColor()
     return (
         <>
-            <View>
+            <View style={[styles.container, { backgroundColor: cores.bgPrimary }]}>
                 <StatusBar backgroundColor="black"/>
-                <Header color={cores.bgPrimary} subtitle={"Login"} />
-                <Text style={styles.texto}>Faça Login para Acessar o Sistema!</Text>
+                <Header color={cores.bgSecundary} subtitle={"Login"} />
+                <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Faça Login para Acessar o Sistema!</Text>
                 <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"} />
                 <Input texto={"Senha:"} placeholder={"Insira sua senha"}/>
                 <Botao texto_botao="Login" href="TabNav/Scanner"/>
@@ -22,12 +21,12 @@ export default function Login() {
                 <View style={styles.bloco}>
                     <Link href="TelasIniciais/Cadastro" asChild>
                         <TouchableOpacity>
-                            <Text style={styles.texto2}>Cadastre-se</Text>
+                            <Text style={[styles.texto2, { color: cores.textColorPrimary }]}>Cadastre-se</Text>
                         </TouchableOpacity>
                     </Link>
                     <Link href="TelasIniciais/RecSenha" asChild>
                         <TouchableOpacity>
-                            <Text style={styles.texto2}>Esqueceu a senha?</Text>
+                            <Text style={[styles.texto2, { color: cores.textColorPrimary }]}>Esqueceu a senha?</Text>
                         </TouchableOpacity>
                     </Link>
 
@@ -39,6 +38,9 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        height: 860
+    },
     texto: {
         display: "flex",
         alignSelf: "center",
