@@ -14,10 +14,10 @@ export default function Inventarios() {
             <Navbar color="white" icon1={<AntDesign name="arrowleft" size={24} color="black" />} cortexto="black" texto="Lista" icon2={<AntDesign name="pluscircleo" size={24} color="black" />}/> 
 
             <ScrollView style={{flex: 1}}>
-                <Link href="">
+                <Link href="TabNav/DrawerNav/Home/DescItem" asChild>
                     <BlocoCadeira />
                 </Link>
-                <Link href="Home/DescItem" asChild>
+                <Link href="TabNav/DrawerNav/Home/DescItem" asChild>
                     <BlocoCadeira />
                 </Link>
                 <Link href="Home/DescItem">

@@ -3,13 +3,16 @@ import { StatusBar } from "expo-status-bar"
 import Input from "@comp/Inputs"
 import Botao from "@comp/Botao"
 import Header from "@comp/Header"
+import { useColor } from "../../temas/tema"
 
 export default function RecSenha () {
+    const cores = useColor()
+
     return (
         <>
-            <View>
-                <Header color={"#011E83"} subtitle={"Recuperação de senha"}></Header>
-                <Text style={styles.texto}>Insira seu e-mail para recuperar a senha!</Text>
+            <View style={[styles.container, {backgroundColor: cores.bgPrimary}]}>
+                <Header color={cores.bgSecundary} subtitle={"Recuperação de senha"}></Header>
+                <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Insira seu e-mail para recuperar a senha!</Text>
                 <StatusBar backgroundColor="black"/>
                 <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"}></Input>
                 <Botao texto_botao={"Recuperar senha"} href="TelasIniciais/Login"></Botao>
@@ -25,5 +28,8 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         marginTop: 25,
         marginBottom: 15
+    },
+    container: {
+        height: 860
     }
 });
