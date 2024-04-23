@@ -15,16 +15,25 @@ export default function Layout() {
                         placeholder: "Pesquisar"
                     },
                     headerTitleAlign: "center",
-                    headerTitle: "Lista"
+                    headerTitle: "Lista",
+                    headerTintColor: cores.colorTitle2
                 }}/>
                 <Stack.Screen name="AddItems" options={{
-                    headerTitleAlign: 'center'
+                    headerTitleAlign: 'center',
+                    headerTitle: "Cadastro de Itens",
+                    headerTintColor: cores.colorTitle,
+                    headerStyle: {
+                        backgroundColor: "#FF0000"
+                    }
                 }}/>
                 <Stack.Screen name="DescItem" options={{
-                    headerTitleAlign: 'center'
+                    headerTitleAlign: 'center',
+                    headerTitle: "Descrição do Item",
+                    headerTintColor: cores.colorTitle
                 }}/>
                 <Stack.Screen name="Editar" options={{
-                    headerTitleAlign: 'center'
+                    headerTitleAlign: 'center',
+                    headerTintColor: cores.colorTitle
                 }}/>
             </Stack>
         </>

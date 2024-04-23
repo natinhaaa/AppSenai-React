@@ -14,7 +14,11 @@ export interface Cores {
     bgButton?: string
     bgInput?: string
     colorTextInput: string,
-    borderInput?: string
+    borderInput?: string,
+    //home
+    colorTitle: string,
+    colorTitle2: string,
+    colorNav: string,
 }
 
 
@@ -23,14 +27,17 @@ const light: Cores = {
     bgSecundary: "#FF0000",
     bgInfo: "#011E83",
     textColorPrimary: '#011E83',
-    textColorSecundary: '#011E83',
+    textColorSecundary: '#000000',
     bgPrimaryVariant: '#F5F5F5',
     textColorPrimaryVariant: '#595959',
     bgHover: '#F39200',
     bgButton: '#101010',
     bgInput: '#F5F5F5',
     colorTextInput: "#595959",
-    borderInput: "#F5F5F5"
+    borderInput: "#F5F5F5",
+    colorTitle: "#FFFFFF",
+    colorTitle2: "#595959",
+    colorNav: "#FFFFFF",
 }
 const dark: Cores = {
     // bloco pagina
@@ -48,7 +55,10 @@ const dark: Cores = {
     // cor input
     bgInput: '#3A2828',
     colorTextInput: "#CBCBCB",
-    borderInput: "#3A2828"
+    borderInput: "#3A2828",
+    colorTitle: "#FFFFFF",
+    colorTitle2: "#595959",
+    colorNav: "#000000"
     
 }
 
