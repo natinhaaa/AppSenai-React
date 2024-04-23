@@ -22,7 +22,7 @@ export default function AddItems() {
 const styles = StyleSheet.create({
     blocoInputs:{
         marginTop: 30,
-        height: 665
+        height: 690
     },
     container: {
         backgroundColor: "white"

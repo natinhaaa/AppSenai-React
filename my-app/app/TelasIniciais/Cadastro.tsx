@@ -14,11 +14,11 @@ export default function Cadastro() {
             <StatusBar backgroundColor="black"/>
                 <Header color={cores.bgSecundary} subtitle={"Cadastre-se"}></Header>
                 <View>
-                    <Input style={styles.input} texto={"Nome:"} placeholder={"Digite seu nome"}></Input>
-                    <Input style={styles.input} texto={"Sobrenome:"} placeholder={"Digite seu sobrenome"}></Input>
-                    <Input style={styles.input} texto={"E-mail:"} placeholder={"Digite seu e-mail"}></Input>
-                    <Input style={styles.input} texto={"Senha:"} placeholder={"Digite uma senha"} secureTextEntry></Input>
-                    <Input style={styles.input} texto={"Confirmar senha:"} placeholder={"Confirme a senha"} secureTextEntry></Input>
+                    <Input cor={cores} style={styles.input} texto={"Nome:"} placeholder={"Digite seu nome"}></Input>
+                    <Input cor={cores} style={styles.input} texto={"Sobrenome:"} placeholder={"Digite seu sobrenome"}></Input>
+                    <Input cor={cores} style={styles.input} texto={"E-mail:"} placeholder={"Digite seu e-mail"}></Input>
+                    <Input cor={cores} style={styles.input} texto={"Senha:"} placeholder={"Digite uma senha"} secureTextEntry></Input>
+                    <Input cor={cores} style={styles.input} texto={"Confirmar senha:"} placeholder={"Confirme a senha"} secureTextEntry></Input>
                 </View>
                 <Botao texto_botao={"Cadastre-se"} href="TelasIniciais/Login"></Botao>
         </View>

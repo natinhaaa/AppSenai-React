@@ -2,6 +2,7 @@ import { Tabs } from "expo-router";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
+import { red } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 
 
 export default function layout() {

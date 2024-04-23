@@ -18,7 +18,7 @@ export default function DescItem() {
                         <BlocoDesc titulo="Data de Registro" descriçao="05/03/2024"/>
                     </View>
                 </ScrollView>
-                <Link href="/Editar" asChild>
+                <Link href="/TabNav/DrawerNav/Home/Editar" asChild>
                     <TouchableOpacity>
                         <MaterialCommunityIcons style={styles.editar} name="pencil-circle" size={55} color="red" />
                     </TouchableOpacity>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     },
 
     blocoItens:{
-        height: 680,
+        height: 720,
         backgroundColor: "white"
     },
 

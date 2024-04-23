@@ -24,7 +24,7 @@ export default function Editar() {
 const styles = StyleSheet.create({
     blocoInputs:{
         marginTop: 30,
-        height: 660
+        height: 690
     },
     container: {
         backgroundColor: "white"

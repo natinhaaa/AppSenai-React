@@ -2,30 +2,31 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, TextInputProps, View } from 'react-native';
 import { useState } from 'react';
 import { useColor } from '../temas/tema';
+import { Cores } from '../temas/tema';
 
 interface InputProps extends TextInputProps{
-    texto: string
+    texto: string,
+    cor: Cores
 }
 
 const Input =({texto, ...props}: InputProps) => {
     const cores = useColor();
-    const [hover, setHover] = useState("#F5F5F5")
+    const [hover, setHover] = useState(cores.bgInput)
 
     const styles = StyleSheet.create({
         container: {
             marginLeft: 20
-
         },
 
         input: {
             marginLeft: 20,
             maxWidth: 310,
             height: 40,
-            backgroundColor: '#F5F5F5',
             padding: 10,
             borderRadius: 5,
             borderWidth: 1,
-            borderColor: hover
+            borderColor: hover,
+            backgroundColor: cores.bgInput
         },
 
         texto: {
@@ -40,7 +41,7 @@ const Input =({texto, ...props}: InputProps) => {
         <>
             <View style={styles.container}>
                 <Text style={[styles.texto, {color: cores.textColorPrimaryVariant}]}>{texto}</Text>
-                <TextInput {...props} style={styles.input} onFocus={() => {setHover("#F39200")}} onBlur={() => {setHover("#F5F5F5")}}/>
+                <TextInput {...props} style={[styles.input]} onFocus={() => {setHover("#F39200")}} onBlur={() => {setHover(cores.borderInput)}}/>
             </View>
         </>
         

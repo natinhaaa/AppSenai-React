@@ -10,57 +10,57 @@ export default function Inventarios() {
     return (
     <>
         <ScrollView style={{flex: 1}}>
-            <Link href="/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
-            <Link href="Home/DescItem">
+            <Link href="/TabNav/DrawerNav/Home/DescItem">
                 <BlocoCadeira />
             </Link>
             
         </ScrollView>
-        <Link href="Home/AddItems" asChild>
+        <Link href="/TabNav/DrawerNav/Home/AddItems" asChild>
             <TouchableOpacity>
                 <Ionicons style={styles.adicionar} name="add-circle-sharp" size={55} color="red" />
             </TouchableOpacity>
