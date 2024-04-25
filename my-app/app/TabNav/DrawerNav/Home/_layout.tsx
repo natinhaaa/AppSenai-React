@@ -3,26 +3,43 @@ import { DrawerToggleButton } from "@react-navigation/drawer";
 import { useColor } from "../../../../temas/tema";
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import { StyleSheet } from "react-native";
+import { Link } from "expo-router";
 
 export default function Layout() {
     const cores = useColor();
+
     return (
         <>
             <Stack>
                 <Stack.Screen name="Inventarios" options={{
                     headerLeft: () => (
-                    <DrawerToggleButton />
+                        <DrawerToggleButton tintColor={cores.colorTitle2}/>
+                    
                     ),
                     headerSearchBarOptions: {
-                        placeholder: "Pesquisar"
+                        placeholder: "Pesquisar",
+                        hintTextColor: cores.colorTitle2,
+                        headerIconColor: cores.colorTitle2
+                        
                     },
                     headerTitleAlign: "center",
                     headerTitle: "Lista",
-                    headerTintColor: cores.colorTitle2
+                    headerTintColor: cores.colorTitle2,
+                    headerStyle: {
+                        backgroundColor: cores.colorHeaderInvent
+                    }
+
+
+                    
+
                 }}/>
                 <Stack.Screen name="AddItems" options={{
                     headerRight: () => (
-                        <Ionicons name="add-circle-outline" size={28} color="white" />
+                        <Link href="TabNav/DrawerNav/Home/Inventarios">
+                            <Ionicons name="add-circle-outline" size={28} color="white" />
+                        </Link>
+                        
                     ),
                     headerTitleAlign: 'center',
                     headerTitle: "Cadastro de Itens",

@@ -3,11 +3,21 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import Input2 from "@comp/Inputs2";
+import { useColor } from "../../../../temas/tema";
 
 export default function AddItems() {
+    const cores = useColor()
+    const styles = StyleSheet.create({
+        blocoInputs:{
+            marginTop: 30,
+            height: 690
+        }
+    
+    })
+
     return (
         <>
-            <View style={styles.container}>
+            <View style={{backgroundColor: cores.bgPrimary}}>
                 <View style={styles.blocoInputs}>
                     <Input2 texto={"Nº Inventário"} placeholder="Ex: 001"/>
                     <Input2 texto={"Descrição"} placeholder="Ex: Notebook"/>
@@ -19,13 +29,3 @@ export default function AddItems() {
         </>
     )
 }
-const styles = StyleSheet.create({
-    blocoInputs:{
-        marginTop: 30,
-        height: 690
-    },
-    container: {
-        backgroundColor: "white"
-    }
-
-})

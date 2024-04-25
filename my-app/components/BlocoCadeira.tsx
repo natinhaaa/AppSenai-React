@@ -4,42 +4,41 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Link } from 'expo-router';
 import { useColor } from '../temas/tema';
 
-function BlocoCadeira () {
+const BlocoCadeira = ({...props})=>{
     const cores = useColor()
+    const styles = StyleSheet.create({
+
+        container: {
+            height: 70,
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            borderBottomWidth: 1,
+            borderBottomColor: cores.colorBorderCadeira
+        },
+    
+        conteudo: {
+            marginLeft: 15,
+            width: 380
+        },
+    
+        numero: {
+            fontWeight: "bold",
+            marginBottom: 5
+        }
+    
+    })
     return (
-            <View style={[styles.container, {backgroundColor: cores.bgSecundary}]}>
+            <View style={[styles.container, {backgroundColor: cores.colorBlocoCadeira}]}>
                     <View style={styles.conteudo}>
-                        <Text style={styles.numero}>956389</Text>
-                        <Text>CADEIRA SENAI</Text>
+                        <Text style={[styles.numero, {color: cores.colorTextCadeira}]}>{props.numerocadeira}</Text>
+                        <Text style={[{color: cores.colorTextCadeira}]}>{props.textocadeira}</Text>
                     </View>
             </View>
         
     );
 }
-
-const styles = StyleSheet.create({
-
-    container: {
-        height: 70,
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        borderBottomWidth: 1,
-        borderBottomColor: "#F5F5F5"
-    },
-
-    conteudo: {
-        marginLeft: 15,
-        width: 380
-    },
-
-    numero: {
-        fontWeight: "bold",
-        marginBottom: 5
-    }
-
-})
 
 export default BlocoCadeira;
