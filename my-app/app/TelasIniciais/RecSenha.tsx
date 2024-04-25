@@ -12,7 +12,7 @@ export default function RecSenha () {
         <>
             <View style={[styles.container, {backgroundColor: cores.bgPrimary}]}>
                 <Header color={cores.bgSecundary} subtitle={"Recuperação de senha"}></Header>
-                <Text style={[styles.texto, { color: cores.textColorPrimary }]}>Insira seu e-mail para recuperar a senha!</Text>
+                <Text style={[styles.texto, { color: cores.textColorSecundary }]}>Insira seu e-mail para recuperar a senha!</Text>
                 <StatusBar backgroundColor="black"/>
                 <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"}></Input>
                 <Botao texto_botao={"Recuperar senha"} href="TelasIniciais/Login"></Botao>
@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
     container: {
-        height: 860
+        height: "100%"
     }
 });

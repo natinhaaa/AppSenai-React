@@ -13,7 +13,7 @@ export interface Cores {
     bgHover: string
     bgButton?: string
     bgInput?: string
-    colorTextInput: string,
+    colorTextInput?: string,
     borderInput?: string,
     //home
     colorTitle: string,

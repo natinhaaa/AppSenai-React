@@ -14,8 +14,8 @@ export default function Login() {
                 <StatusBar backgroundColor="black"/>
                 <Header color={cores.bgSecundary} subtitle={"Login"} />
                 <Text style={[styles.texto, { color: cores.textColorSecundary }]}>Faça Login para Acessar o Sistema!</Text>
-                <Input cor={cores} texto={"E-mail:"} placeholder={"Insira seu e-mail"} />
-                <Input cor={cores} texto={"Senha:"} placeholder={"Insira sua senha"}/>
+                <Input texto={"E-mail:"} placeholder={"Insira seu e-mail"} />
+                <Input texto={"Senha:"} placeholder={"Insira sua senha"}/>
                 <Botao texto_botao="Login" href="TabNav/Scanner"/>
                 
                 <View style={styles.bloco}>
@@ -39,7 +39,7 @@ export default function Login() {
 
 const styles = StyleSheet.create({
     container: {
-        height: 860
+        height: "100%"
     },
     texto: {
         display: "flex",

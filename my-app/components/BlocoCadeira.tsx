@@ -2,10 +2,12 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Link } from 'expo-router';
+import { useColor } from '../temas/tema';
 
 function BlocoCadeira () {
+    const cores = useColor()
     return (
-            <View style={styles.container}>
+            <View style={[styles.container, {backgroundColor: cores.bgSecundary}]}>
                     <View style={styles.conteudo}>
                         <Text style={styles.numero}>956389</Text>
                         <Text>CADEIRA SENAI</Text>
@@ -25,8 +27,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         borderBottomWidth: 1,
-        borderBottomColor: "#F5F5F5",
-        backgroundColor: "#FFFFFF"
+        borderBottomColor: "#F5F5F5"
     },
 
     conteudo: {

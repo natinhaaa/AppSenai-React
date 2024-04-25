@@ -12,7 +12,7 @@ const Header = ({color, subtitle}: Color_TextProps) => {
         <View style={[styles.container, {backgroundColor: color}]}>
             <StatusBar backgroundColor="black"/>
             <Image source={require('@assets/senai_logo.png')} style={styles.logo}/>
-            <Text style={styles.subtitulo}>{subtitle}</Text>
+            <Text style={[styles.subtitulo, {color: "#F5F5F5"}]}>{subtitle}</Text>
         </View>
     );
 }
@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
 
     subtitulo: {
         color: "white",
-        marginTop: 10
+        marginTop: 10,
+        fontSize: 20
     }
 })
 

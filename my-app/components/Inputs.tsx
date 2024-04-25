@@ -5,8 +5,7 @@ import { useColor } from '../temas/tema';
 import { Cores } from '../temas/tema';
 
 interface InputProps extends TextInputProps{
-    texto: string,
-    cor: Cores
+    texto: string
 }
 
 const Input =({texto, ...props}: InputProps) => {
@@ -27,6 +26,7 @@ const Input =({texto, ...props}: InputProps) => {
             borderWidth: 1,
             borderColor: hover,
             backgroundColor: cores.bgInput
+            
         },
 
         texto: {
@@ -41,7 +41,7 @@ const Input =({texto, ...props}: InputProps) => {
         <>
             <View style={styles.container}>
                 <Text style={[styles.texto, {color: cores.textColorPrimaryVariant}]}>{texto}</Text>
-                <TextInput {...props} style={[styles.input]} onFocus={() => {setHover("#F39200")}} onBlur={() => {setHover(cores.borderInput)}}/>
+                <TextInput {...props} style={[styles.input]} placeholderTextColor={cores.colorTextInput} onFocus={() => {setHover("#F39200")}} onBlur={() => {setHover(cores.borderInput)}} />
             </View>
         </>
         
