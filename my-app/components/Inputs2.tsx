@@ -24,7 +24,8 @@ const Input2 =({texto, ...props}: InputProps) => {
             left: 12,
             zIndex: 1,
             fontSize: 12,
-            maxWidth: 110
+            maxWidth: 110,
+            color: hover
         },
 
         input: {

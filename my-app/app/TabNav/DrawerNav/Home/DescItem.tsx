@@ -4,11 +4,32 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { Octicons, Feather, AntDesign } from '@expo/vector-icons';
 import BlocoDesc from "@comp/BlocoDesc";
 import { Link } from "expo-router";
+import { useColor } from "../../../../temas/tema";
 
 export default function DescItem() {
+    const cores = useColor()
+    const styles = StyleSheet.create({
+
+        container:{
+            flex: 1
+        },
+    
+        blocoItens:{
+            height: 720,
+            backgroundColor: cores.bgPrimary
+        },
+    
+        editar: {
+            position: "absolute",
+            right: 20,
+            bottom: 20
+        }
+    
+    })
+    
     return (
         <>
-            <View style={styles.container}>
+            <View style={[styles.container]}>
                 <ScrollView>
                     <View style={styles.blocoItens}>
                         <BlocoDesc titulo="N° do Inventário:" descriçao="957689"/>
@@ -29,21 +50,3 @@ export default function DescItem() {
         
     )
 }
-const styles = StyleSheet.create({
-
-    container:{
-        flex: 1
-    },
-
-    blocoItens:{
-        height: 720,
-        backgroundColor: "white"
-    },
-
-    editar: {
-        position: "absolute",
-        right: 20,
-        bottom: 20
-    }
-
-})

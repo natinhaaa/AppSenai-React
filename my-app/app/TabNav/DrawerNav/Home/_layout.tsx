@@ -37,7 +37,7 @@ export default function Layout() {
                 <Stack.Screen name="AddItems" options={{
                     headerRight: () => (
                         <Link href="TabNav/DrawerNav/Home/Inventarios">
-                            <Ionicons name="add-circle-outline" size={28} color="white" />
+                            <Ionicons name="add-circle-outline" size={35} color="white" />
                         </Link>
                         
                     ),
@@ -50,7 +50,9 @@ export default function Layout() {
                 }}/>
                 <Stack.Screen name="DescItem" options={{
                     headerRight: () => (
-                        <Ionicons name="reload" size={24} color="white" />
+                        <Link href="TabNav/DrawerNav/Home/Inventarios">
+                            <Ionicons name="reload" size={30} color="white" />
+                        </Link>
                     ),
                     headerTitleAlign: 'center',
                     headerTitle: "Descrição do Item",
@@ -61,7 +63,9 @@ export default function Layout() {
                 }}/>
                 <Stack.Screen name="Editar" options={{
                     headerRight: () => (
-                        <AntDesign name="checkcircle" size={24} color="white" />
+                        <Link href="TabNav/DrawerNav/Home/Inventarios">
+                            <AntDesign name="checkcircle" size={28} color="white" />
+                        </Link>
                     ),
                     headerTitleAlign: 'center',
                     headerTintColor: cores.colorTitle,

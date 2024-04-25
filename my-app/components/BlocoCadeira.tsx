@@ -16,7 +16,7 @@ const BlocoCadeira = ({...props})=>{
             flexDirection: "row",
             justifyContent: "space-between",
             borderBottomWidth: 1,
-            borderBottomColor: cores.colorBorderCadeira
+            borderBottomColor: cores.colorBorderBloco
         },
     
         conteudo: {
@@ -33,8 +33,8 @@ const BlocoCadeira = ({...props})=>{
     return (
             <View style={[styles.container, {backgroundColor: cores.colorBlocoCadeira}]}>
                     <View style={styles.conteudo}>
-                        <Text style={[styles.numero, {color: cores.colorTextCadeira}]}>{props.numerocadeira}</Text>
-                        <Text style={[{color: cores.colorTextCadeira}]}>{props.textocadeira}</Text>
+                        <Text style={[styles.numero, {color: cores.colorTextBloco}]}>{props.numerocadeira}</Text>
+                        <Text style={[{color: cores.colorTextBloco}]}>{props.textocadeira}</Text>
                     </View>
             </View>
         

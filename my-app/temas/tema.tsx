@@ -20,9 +20,10 @@ export interface Cores {
     colorTitle2: string,
     colorNav: string,
     colorBlocoCadeira: string,
-    colorTextCadeira: string,
+    colorTextBloco: string,
     colorHeaderInvent: string,
-    colorBorderCadeira: string
+    colorBorderBloco: string,
+    colorTextPerfil: string
 }
 
 
@@ -43,9 +44,10 @@ const light: Cores = {
     colorTitle2: "#595959",
     colorNav: "#FFFFFF",
     colorBlocoCadeira: "#FFFFFF",
-    colorTextCadeira: "#000000",
+    colorTextBloco: "#000000",
     colorHeaderInvent: "#FFFFFF",
-    colorBorderCadeira: "#F5F5F5"
+    colorBorderBloco: "#F5F5F5",
+    colorTextPerfil: "#000000"
 }
 const dark: Cores = {
     // bloco pagina
@@ -68,9 +70,10 @@ const dark: Cores = {
     colorTitle2: "#FFFFFF",
     colorNav: "#000000",
     colorBlocoCadeira: "#3A2828",
-    colorTextCadeira: "#FFFFFF",
+    colorTextBloco: "#FFFFFF",
     colorHeaderInvent: "#3A2828",
-    colorBorderCadeira: "#4d3737"
+    colorBorderBloco: "#4d3737",
+    colorTextPerfil: "#FFFFFF"
     
 }
 

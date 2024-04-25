@@ -4,8 +4,20 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import Input2 from "@comp/Inputs2";
 import { Link } from "expo-router";
+import { useColor } from "../../../../temas/tema";
 
 export default function Editar() {
+    const cores = useColor()
+    const styles = StyleSheet.create({
+        blocoInputs:{
+            marginTop: 30,
+            height: 690
+        },
+        container: {
+            backgroundColor: cores.bgPrimary
+        }
+    
+    })
     return (
         <>
             <View style={styles.container}>
@@ -21,14 +33,4 @@ export default function Editar() {
         
     )
 }
-const styles = StyleSheet.create({
-    blocoInputs:{
-        marginTop: 30,
-        height: 690
-    },
-    container: {
-        backgroundColor: "white"
-    }
-
-})
 
