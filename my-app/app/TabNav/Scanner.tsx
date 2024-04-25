@@ -1,56 +1,60 @@
-import { useState, useEffect, useRef } from 'react';
-import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
-import { Camera } from 'expo-camera';
+import { useState } from "react";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
-import { useColor } from '../../temas/tema';
+import { Camera, CameraType } from "expo-camera";
 
-export default function Scanner() {
-    const cores = useColor()
-    const camera = useRef(null);
-    const [hasPermission, setHasPermission] = useState(null);
+const Scanner = () => {
+    const [isCameraActive, setIsCameraActive] = useState(false);
+    const [permission] = Camera.useCameraPermissions();
 
-    useEffect(() => {
-        (
-            async () => {
-            const {status} = await Camera.requestCameraPermissionsAsync();
-            setHasPermission(status === 'granted');
-            }
-        )
-    ();
-    }, []);
+    if (!permission)
+        return null;
 
-    if (hasPermission === null) {
-        return <View />
-    }
-
-    if (hasPermission === false) {
-        return <Text>Não foi possível abrir a câmera</Text>
-    }
-
-    const styles = StyleSheet.create({
-        container: {
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: "100%"
-        },
-        camera: {
-            width: 475,
-            height: 480,
-        },
-
-        qrcode: {
-            flex: 1,
-            alignSelf: "center",
-            verticalAlign: "middle",
-            opacity: 0.1
-        }
-    });
+    if (!permission.granted)
+        return null;
 
     return (
-        <SafeAreaView style={[styles.container, { backgroundColor: cores.bgPrimary }]}>
-            <Camera style={styles.camera} ref={camera}>
-                <MaterialIcons style={styles.qrcode} name="qr-code-scanner" size={420} color="black" />
-            </Camera>
-        </SafeAreaView>
+        <View style={styles.container}>
+            {isCameraActive ? (
+                <Camera style={styles.camera} type={CameraType.back}>
+                    <View style={styles.button}>
+                        <TouchableOpacity style={styles.button} onPress={() => setIsCameraActive(false)}>
+                            <MaterialIcons name="qr-code-scanner" size={300} color="#5D5C5C" />
+                        </TouchableOpacity>
+                    </View>
+                </Camera>
+            ) : (
+                <TouchableOpacity style={styles.buttonContainer} onPress={() => setIsCameraActive(true)}>
+                    <MaterialIcons style={styles.qrcode} name="qr-code-scanner" size={300} color="#5D5C5C" />
+                </TouchableOpacity>
+            )}
+        </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    camera: {
+        width: '100%',
+        height: '100%',
+    },
+    buttonContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    button: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    qrcode: {
+        opacity: 0.1
+    }
+});
+
+export default Scanner;

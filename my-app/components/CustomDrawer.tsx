@@ -1,7 +1,6 @@
 import { DrawerItemList } from "@react-navigation/drawer";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { useColor } from "../temas/tema";
-import { Link } from "expo-router";
 
 export default function CustomDrawer(props: any) {
     const cores = useColor()
